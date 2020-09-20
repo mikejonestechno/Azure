@@ -27,9 +27,11 @@ There are two settings to consider:
 
 When code is pushed or PR merged Git will automatically integrate the commits (if there are no merge conflicts). 
 
-The 'require status checks to pass' setting can be used to lock the shared mainlin branch and only permit code merges from separate branches where the status checks have passed. 
+The 'require status checks to pass' setting can be used to protect the shared mainline branch and only permit code merges from separate branches containing working code (where the status checks have passed).
 
-> This setting prevents commits being directly pushed to the protected branch. 
+> Note: The branch protection rules are not applied to changes made by Git repo administrators unless the 'Include administrators' setting is also enabled.
+
+This setting prevents commits being directly pushed to the protected branch. 
 
 The setting "Require status checks to pass before merging" will ensure any associated pipeline trigger completes successfully before the code is merged.
 
