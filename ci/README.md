@@ -1,10 +1,10 @@
-# Continuous Integration
+# Continuous Integration with Git / GitHub
 
 > **Continuous Integration** is the practice of merging all developers' working copies to a shared mainline several times a day.
 
 *Fowler, Martin (1 May 2006). "[Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html)". Retrieved 9 January 2014.*
 
-## Git Continuous Integration
+## The Problem with Git
 
 The default Git settings only perform merge conflict checks. 
 
@@ -29,7 +29,9 @@ When code is pushed or PR merged Git will automatically integrate the commits (i
 
 The 'require status checks to pass' setting can be used to protect the shared mainline branch and only permit code merges from separate branches containing working code (where the status checks have passed).
 
-> Note: The branch protection rules are not applied to changes made by Git repo administrators unless the 'Include administrators' setting is also enabled.
+> **Include Administrators**
+> 
+> Ensure the 'Include administrators' setting is also enabled otherwise changes made by Git repo administrators will be integrated without any checks (unless of course you have awesome repo admins that will NEVER introduce breaking changes). 
 
 This setting prevents commits being directly pushed to the protected branch. 
 
