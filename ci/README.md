@@ -63,6 +63,8 @@ An additional setting "Require branches to be up to date before merging" will en
 ---
 To be reviewed...
 
+- small frequent PRs vs 500 lines of code
+
 ## Pull Requests
 
 A pull request that triggers an Azure pipeline does not block the merge request or wait until the pipeline is successfully completed. 
