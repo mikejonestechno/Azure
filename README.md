@@ -1,28 +1,12 @@
-# Azure DevOps Pipeline Sample 
+# Azure DevOps Pipelines
 
 This repo was created to explore Azure Pipelines and CI/CD patterns.
- 
-Create a new Azure DevOps pipeline and select a new empty GitHub repo. 
 
-Azure DevOps adds a sample `\azure-pipelines.yml` file to the repo root and names the new pipeline `{$GitHubAccountName}.{$RepoName}` in the Azure DevOps web portal.
+# Azure DevOps Pipeline Sample 
 
-```
-trigger:
-- master
+The sample `\azure-pipelines.yml` created by Azure DevOps when you create a new pipeline on a new empty GitHub repo. 
 
-pool:
-  vmImage: 'ubuntu-latest'
+Read more about the [Azure DevOps pipeline sample](sample/README.md) in the [README.md](sample/README.md).
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-  ```
-
-The sample pipeline will be triggered on any push or merge to the `master` branch. Changes to other branches do not trigger the pipeline but the pipeline can be run manually for any branch using the Azure DevOps web portal.
-
-> Note: All pull requests **for all branches** will also trigger the pipeline unless a `-pr` section is added to the `.yml` file with an include/exclude pattern. When a branch is included in a PR all push commits to that branch will trigger the pipeline until the PR is complete.
+> ### What happens when a pipeline.yml file is moved to a different directory?
+> Does the existing Azure DevOps pipeline associated with the .yml file continue to get triggered, or is the trigger broken because the .yml file has been moved?
