@@ -1,6 +1,6 @@
 # Azure DevOps Pipelines
 
-This repo was created to explore Azure Pipelines and CI/CD patterns.
+This repo was created to explore Azure DevOps Pipelines and CI/CD patterns.
 
 ## Azure DevOps Pipeline Sample 
 

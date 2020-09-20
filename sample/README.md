@@ -27,7 +27,7 @@ The sample pipeline will be triggered on any push or merge to the `master` branc
 
 > Note: All pull requests **for all branches** will also trigger the pipeline unless a `-pr` section is added to the .yml file with an include/exclude pattern. When a branch is included in a PR all push commits to that branch will trigger the pipeline until the PR is complete.
 
-## Moving the pipeline.yml file to a different directory
+### Moving the pipeline.yml file to a different directory
 
 Azure DevOps creates the sample `\azure-pipelines.yml` file in the repo root directory. 
 
