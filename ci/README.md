@@ -63,6 +63,8 @@ An additional setting "Require branches to be up to date before merging" will en
 ---
 To be reviewed...
 
+Branches should be small, short lived branches integrated to shared mainline multiple times per day. Either branches have life < 8 hours before being deleted or branches persist over several days BUT have commits frequently (pulled and) pushed to shared mainline every few hours.
+
 ## Pull Requests
 
 A pull request that triggers an Azure pipeline does not block the merge request or wait until the pipeline is successfully completed. 
