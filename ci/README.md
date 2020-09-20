@@ -41,7 +41,7 @@ The status checks will prevent pull requests being completed on the protected br
 
 Screenshot:
 
-![Git branch protection status check settings](git-pr-pipeline-status-check.png)
+![Git PR paused waiting for status check to complete](git-pr-pipeline-status-check.png)
 
 If the branch has associated Azure pipelines, the pipelines must be completed successfully to pass the check.
 
@@ -53,7 +53,17 @@ If the branch has associated Azure pipelines, the pipelines must be completed su
 
 ### Require branches to be up to date before merging
 
-The "Require branches to be up to date before merging" setting will ensure merges are up to date (zero commits behind) the target branch. This can help false positives checking a branch that is out of date. 
+The "Require branches to be up to date before merging" setting will ensure merges are up to date (zero commits behind) the target branch. This can help ensuring that the PR branch and checks are up to date in case other commits are made to the target branch while the pipeline is running or while other developers are reviewing the change. 
+
+Without this setting developers can inadvertenly spend effort reviewing PR changes against a stale version of the target branch.
+
+Click the 'Update branch' button and GitHub will automatically perform an pull merge from the protected branch and create a new merge commit on the PR.
+
+Too easy.
+
+Screenshot:
+
+![Git PR requires target branch to be pulled](git-pr-pipeline-out-of-date-check.png)
 
 ---
 To be reviewed...
