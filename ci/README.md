@@ -7,7 +7,7 @@
 
 ## Pipeline Status Checks
 
-When code is pushed or PR merged Git does not wait for any branch pipeline trigger actions . The default settings only perform merge conflict checks.
+When code is pushed or PR merged Git does not wait for any pipelines or other tests to complete. The default settings only perform merge conflict checks.
 
 This means code will be integrated even if an associated Azure pipeline trigger fails to start or fails to successfully complete for any reason.
 
