@@ -1,5 +1,8 @@
 # Azure
-Azure Pipelines with Terraform
+I plan to use this repo to explore use of Azure Pipelines with Terraform.
 
-The Azure DevOps sample pipeline creates a `\azure-pipelines.yml` pipeline with the display name `<GitHubAccountName>.<RepoName>`.
- 
+I created a new Azure DevOps pipeline and selected a new empty GitHub repo. 
+
+Azure DevOps added a sample `\azure-pipelines.yml` and named the new pipeline `{$GitHubAccountName}.{$RepoName}` in the Azure DevOps web portal.
+
+The sample pipeline is triggered on any push or merge to the `master` branch. Changes to other branches do not trigger the pipeline but the pipeline can be run manually using the Azure DevOps web portal.
