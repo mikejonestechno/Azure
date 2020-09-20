@@ -25,9 +25,11 @@ There are two settings to consider:
 
 ## Require Status Checks To Pass
 
-When code is pushed or PR merged Git does not wait for any pipelines or other tests to complete. 
+When code is pushed or PR merged Git will automatically integrate the commits (if there are no merge conflicts). 
 
-This means code will be integrated even if an associated Azure pipeline trigger fails to start or fails to successfully complete for any reason.
+The 'require status checks to pass' setting can be used to lock the shared mainlin branch and only permit code merges from separate branches where the status checks have passed. 
+
+> This setting prevents commits being directly pushed to the protected branch. 
 
 The setting "Require status checks to pass before merging" will ensure any associated pipeline trigger completes successfully before the code is merged.
 
