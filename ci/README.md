@@ -4,7 +4,7 @@
 
 *Fowler, Martin (1 May 2006). "[Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html)". Retrieved 9 January 2014.*
 
-## The Problem with Git
+## Implementing CI with Git 
 
 The default Git settings only perform merge conflict checks.
 
@@ -23,10 +23,11 @@ There are two settings to consider that are described in more detail below:
 - Require status checks to pass before merging
 - Require branches to be up to date before merging
 
-Screenshot
+Screenshot:
+
 ![Git branch protection status check settings](git-pipeline-status-check.png)
 
-## Require Status Checks To Pass
+### Require Status Checks To Pass
 
 The 'require status checks to pass' setting can be used to protect the shared mainline branch and only allow code to be merged in from branches containing working code (where the status checks have already passed).
 
@@ -40,14 +41,15 @@ If the branch has associated Azure pipelines, the pipelines must be completed su
 
 > Automated tests are not required, as long as the pipeline completes successfully. However if the pipeline includes automated tests, any failing tests should cause a failed pipeline status and subsequently fail the Git status check.  
 
-Screenshot
+Screenshot:
+
 ![Git branch protection status check settings](git-pr-pipeline-status-check.png)
 
 > **Include Administrators**
 > 
 > Ensure the 'Include administrators' setting is also enabled otherwise pull requests created by Git repo administrators will be automatically merged without running any checks (the checks are ignored and skipped). If left disabled Git repo administrators will also be able to directly push changes to the protected branch. (Of course if you have awesome repo admins that will NEVER introduce breaking changes you could leave the 'Include administrators' setting disabled.) 
 
-## Require status checks to pass before merging
+### Require status checks to pass before merging
 
 The 'Require status checks to pass before merging' setting will ensure any associated pipeline trigger completes successfully before the code is merged.
 

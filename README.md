@@ -10,6 +10,6 @@ Read more about the [Azure DevOps pipeline sample](sample/README.md) in the [REA
 
 ## Continuous Integration with Git
 
-Git branch protection rules ensure only working releasable code is pushed to the shared mainline.
+Git branch protection rules can help ensure only *working* or releasable code is pushed to the shared mainline.
 
 Read more about [Continuous Integration with Git](ci/README.md).
