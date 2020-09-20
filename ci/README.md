@@ -23,7 +23,8 @@ There are two settings to consider that are described in more detail below:
 - Require status checks to pass before merging
 - Require branches to be up to date before merging
 
-Screenshot
+Screenshot:
+
 ![Git branch protection status check settings](git-pipeline-status-check.png)
 
 ### Require Status Checks To Pass
@@ -40,7 +41,8 @@ If the branch has associated Azure pipelines, the pipelines must be completed su
 
 > Automated tests are not required, as long as the pipeline completes successfully. However if the pipeline includes automated tests, any failing tests should cause a failed pipeline status and subsequently fail the Git status check.  
 
-Screenshot
+Screenshot:
+
 ![Git branch protection status check settings](git-pr-pipeline-status-check.png)
 
 > **Include Administrators**
