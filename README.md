@@ -25,4 +25,4 @@ steps:
 
 The sample pipeline will be triggered on any push or merge to the `master` branch. Changes to other branches do not trigger the pipeline but the pipeline can be run manually for any branch using the Azure DevOps web portal.
 
-> Note: All pull requests **for all branches** will also trigger the pipeline unless a `-pr` section is added to the `.yml` file with an include/exclude pattern.
+> Note: All pull requests **for all branches** will also trigger the pipeline unless a `-pr` section is added to the `.yml` file with an include/exclude pattern. When a branch is included in a PR all push commits to that branch will trigger the pipeline until the PR is complete.
