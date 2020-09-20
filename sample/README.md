@@ -8,7 +8,7 @@ Azure DevOps adds a sample `\azure-pipelines.yml` file to the repo root and name
 
 ```
 trigger:
-- master
+- main
 
 pool:
   vmImage: 'ubuntu-latest'
