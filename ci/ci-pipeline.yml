@@ -15,6 +15,6 @@ steps:
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
-    sleep 10s
+    sleep 1m
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'

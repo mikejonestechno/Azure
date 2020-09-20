@@ -4,14 +4,30 @@
 
 *Fowler, Martin (1 May 2006). "[Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html)". Retrieved 9 January 2014.*
 
+## Git Continuous Integration
 
-## Pipeline Status Checks
+The default Git settings only perform merge conflict checks. 
 
-When code is pushed or PR merged Git does not wait for any pipelines or other tests to complete. The default settings only perform merge conflict checks.
+When code is pushed or PR merged Git will automatically integrate the commits and then (if there are no merge conflicts) trigger any integration or webhooks.
+
+This can result in breaking, untested code getting pushed in to the shared mainline, subsequently resulting in developers pushing further broken code on top of code that is already broken.
+
+Not good.
+
+## Git Branch Protection Rules
+
+Git branch protection rules can help ensure only *working* or releasable code is pushed to the shared mainline.
+
+There are two settings to consider:
+
+- Require status checks to pass before merging
+- Require branches to be up to date before merging
+
+## Require Status Checks To Pass
+
+When code is pushed or PR merged Git does not wait for any pipelines or other tests to complete. 
 
 This means code will be integrated even if an associated Azure pipeline trigger fails to start or fails to successfully complete for any reason.
-
-A Git branch protection rule can help ensure only *working* or releasable code is pushed to the shared mainline.
 
 The setting "Require status checks to pass before merging" will ensure any associated pipeline trigger completes successfully before the code is merged.
 
