@@ -56,7 +56,6 @@ If the branch has associated Azure pipelines, the pipelines must be completed su
 
 The "Require branches to be up to date before merging" setting will ensure merges are up to date (zero commits behind) the target branch. This can help false positives checking a branch that is out of date. 
 
-
 ---
 To be reviewed...
 
