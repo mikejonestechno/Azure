@@ -12,7 +12,7 @@ Code can be pushed or PR merged to a branch even if it contains defects, fails t
 
 This can result in breaking, untested code getting pushed in to the shared mainline. This can then subsequently result in developers pushing further broken code on top of code that is already broken.
 
-Not good. 
+Not good. DELETEME test for branch ci-doc6
 
 ## Git Branch Protection Rules
 
