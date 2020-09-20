@@ -62,6 +62,10 @@ To be reviewed...
 ## Pull Request practices
 
 ### Automatic PR Completion
+- small frequent PRs vs 500 lines of code
+Branches should be small, short lived branches integrated to shared mainline multiple times per day. Either branches have life < 8 hours before being deleted or branches persist over several days BUT have commits frequently (pulled and) pushed to shared mainline every few hours.
+
+## Pull Requests
 
 - automatic default (squash) merge and branch delete.
 
@@ -69,4 +73,5 @@ To be reviewed...
 
 > Pair programming and mob programming techniques could be evaluated with continuous integration practices, where the continuous integration of two developers' code occurs in the converstation *before* the code is actually written. Further debate of pair and mob programming is outside the scope of this article. For the purpose of this article it is assumed that some level of branch protection will benefit the team. 
 
-
+---
+I had multiple branches with minor changes. One branch was PR merged in. Other branch (which had initially passed the pipeline checks) now shows a merge conflict as the same file was modified on both branches. Was able to resolve merges locally, push to remote Github and then complete the PR. The fixed merge conflict resulted in new commit on the PR which did trigger a re-run of the  pipeline, but I was able to complet the PR on Github BEFORE the pipeline was triggered this second time, and it failed because the PR deleted the branch when I completed it! Perhaps if pipeline has passed once, its possible to complete PR even if subsequent commits on PR cause pipeline to fail.
